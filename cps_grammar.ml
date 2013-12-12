@@ -26,9 +26,8 @@ type category = S | NP | VP | Det | N | Vt
 type 'a term = (category * 'a)
 
 type entity = John | Mary | Dave | Anna (* adding a couple names for variety *)
-(*| Man | Woman*)
 
-(* quick and dirty hardcoding *)
+(* quick and dirty hardcoding, arbitrary truth values *)
 let leave = function
   | John -> true
   | Mary -> false
@@ -173,4 +172,4 @@ Using the inverse scoped version of sentence, this now evaluates to false
 Mary was seen by John, but not Dave
 Anna was seen by Dave, but not John
 So there is no woman such that every man saw that same woman.
-Thus, this sentence is false when read with the inverse scoping. *) 
+Thus, this sentence is false when read with the inverse scoping. *)
